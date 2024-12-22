@@ -3,10 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PriceTrackingPage extends StatelessWidget {
+  static const String routeName = 'price';
   List<Map<String, dynamic>> forecastData = [
-  {'date': '2024-02-01', 'predictedPrice': 1500},
-  {'date': '2024-02-02', 'predictedPrice': 1510},
-  {'date': '2024-02-03', 'predictedPrice': 1495},
+    {'date': '2024-02-01', 'predictedPrice': 1500},
+    {'date': '2024-02-02', 'predictedPrice': 1510},
+    {'date': '2024-02-03', 'predictedPrice': 1495},
   ];
   // static const String priceRout = 'PriceTrackingPage';
   @override
@@ -15,7 +16,6 @@ class PriceTrackingPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white24,
         title: Text('Gold App'),
-
       ),
       endDrawer: Drawer(
         child: ListView(
@@ -41,11 +41,7 @@ class PriceTrackingPage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text(
-                  'About US'
-
-              ),
-
+              title: Text('About US'),
               onTap: () {
                 // إغلاق النافذة المنبثقة وتنفيذ الإجراء المناسب
                 Navigator.pop(context);
@@ -55,10 +51,8 @@ class PriceTrackingPage extends StatelessWidget {
           ],
         ),
       ),
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.all(16.0),
-
         child: Column(
           children: [
             Text(
@@ -105,7 +99,6 @@ class PriceTrackingPage extends StatelessWidget {
                 ),
               ),
             ),
-
           ],
         ),
       ),
